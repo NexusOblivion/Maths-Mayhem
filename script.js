@@ -29,22 +29,22 @@ function generateQuestions() {
 function increment() {
   event.preventDefault();
 
-  operatorSelector = Math.floor(Math.random() * operators.length);
+  operatorSelector = Math.floor(Math.random() * operators.length); //Generates random operator from the list
   operator = operators[operatorSelector];
 
   x = getRandomNumber(1, 15);
-  y = getRandomNumber(1, 15);
+  y = getRandomNumber(1, 15); //Two random numbers for the equation - could set up a difficulty changer to force higher numbers
 
   if (i < 21) {
     document.getElementById("question").innerHTML = i;
     document.getElementById(
       "question_equation"
-    ).innerHTML = `${x} ${operator} ${y}`;
+    ).innerHTML = `${x} ${operator} ${y}`; //String concatenation
     i++;
   } else if (i === 21) {
     document.getElementById("main").style.display = "none";
     document.getElementById("correct-answers").style.display = "block";
-    stopExercise();
+    stopExercise(); //Stops after 20 questions, removed from unlimited practice to ensure the  questions keep going
   }
 }
 

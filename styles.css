@@ -76,17 +76,8 @@ footer a {
   margin: 0.5rem;
   font-size: 1.2rem;
 }
-.timed:hover,
-.unlimited:hover,
-.timed_questions_start button:hover,
-.retry:hover,
-.unlimited-start button:hover,
-.stopUnlimited button:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-.timed_questions_start button,
-.unlimited-start button {
+
+.start button {
   padding: 1rem 1.35rem;
   border-radius: 5.2rem;
   background: #59758f;
@@ -134,10 +125,19 @@ footer a {
 .question input:focus {
   outline: none;
 }
-.timed_questions,
-.unlimited-questions {
+.questions {
   display: none;
 }
 .correct-answers {
   display: none;
+}
+
+.timed:hover,
+.unlimited:hover,
+.timed_questions_start button:hover,
+.retry:hover,
+.unlimited-start button:hover,
+.stopUnlimited button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
